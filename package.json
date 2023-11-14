@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Food recipes app",
   "scripts": {
-    "strat": "parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "repository": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Aragorn-Elessar/Forkify#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.2",
     "parcel": "^2.10.2"
   }
 }
