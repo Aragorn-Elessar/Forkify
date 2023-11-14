@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Aragorn-Elessar/Forkify/issues"
   },
-  "homepage": "https://github.com/Aragorn-Elessar/Forkify#readme"
+  "homepage": "https://github.com/Aragorn-Elessar/Forkify#readme",
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
 }
