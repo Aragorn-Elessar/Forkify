@@ -1,0 +1,19 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Food recipes app",
+  "scripts": {
+    "strat": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aragorn-Elessar/Forkify.git"
+  },
+  "author": "Mahmoud Gadallah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aragorn-Elessar/Forkify/issues"
+  },
+  "homepage": "https://github.com/Aragorn-Elessar/Forkify#readme"
+}
