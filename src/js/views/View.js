@@ -4,6 +4,8 @@ export default class View {
   _data;
 
   render(data) {
+    console.log(data);
+
     // if no data || data is an array && is empty
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
