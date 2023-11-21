@@ -17,8 +17,10 @@ const controlRecipes = async function () {
 
     // Guard clause to prevent empty hash triggering an error
     if (!id) return;
-
     recipeView.renderSpinner();
+
+    // 0) Update results view to mark selected search results
+    resultsView.update(model.getSearchResultsPage());
 
     // 1) Load recipe
     await model.loadRecipe(id);
