@@ -65,7 +65,8 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   // Update the recipe view
-  recipeView.render(model.state.recipe);
+  // recipeView.render(model.state.recipe);
+  recipeView.update(model.state.recipe);
 };
 
 const init = function () {
@@ -75,3 +76,10 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
 };
 init();
+
+console.log(
+  Array.from({
+    df: 1,
+    dsfklj: 2,
+  })
+);
