@@ -71,17 +71,20 @@ const controlServings = function (newServings) {
   recipeView.update(model.state.recipe);
 };
 
+const controlAddBookmark = function () {
+  // Bookmark recipe
+  model.addBookmark(model.state.recipe);
+  console.log(model.state.recipe);
+
+  // Update recipe icon
+  recipeView.update(model.state.recipe);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
 init();
-
-console.log(
-  Array.from({
-    df: 1,
-    dsfklj: 2,
-  })
-);
