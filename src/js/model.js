@@ -144,6 +144,7 @@ export const uploadRecipe = async function (newRecipe) {
     };
 
     const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+    state.recipe = createRecipeObject(data);
     console.log(data);
   } catch (err) {
     // Rethrow error to be caught in controller
