@@ -23,6 +23,7 @@ const createRecipeObject = function (data) {
     servings: recipe.servings,
     cookingTime: recipe.cooking_time,
     ingredients: recipe.ingredients,
+    ...(recipe.key && { key: recipe.key }),
   };
 };
 
@@ -145,7 +146,7 @@ export const uploadRecipe = async function (newRecipe) {
 
     const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
     state.recipe = createRecipeObject(data);
-    console.log(data);
+    addBookmark(state.recipe);
   } catch (err) {
     // Rethrow error to be caught in controller
     throw err;
