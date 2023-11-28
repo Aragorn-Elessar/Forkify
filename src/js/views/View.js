@@ -3,6 +3,14 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
   _data;
 
+  /**
+   * Render the received object to the DOM
+   *
+   * @param {Object | object[]} data The data to be rendered (e.g recipe)
+   * @param {boolean} [render=true] If false, create markup string instead of rendering to the DOM
+   * @returns {undefined | string} A markup string if render=false
+   * @this {Object} View instance
+   */
   render(data, render = true) {
     // if no data || data is an array && is empty
     if (!data || (Array.isArray(data) && data.length === 0))
@@ -11,13 +19,17 @@ export default class View {
     this._data = data;
     const markup = this._generateMarkup();
 
-    // Instead of rendering markup to the DOM, render method returned to markup as a string.
     if (!render) return markup;
 
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  /**
+   * Update the DOM with the received object by comparing the current elements with the new changed elements
+   *
+   * @param {Object | Object[]} data The data to be updated
+   */
   update(data) {
     this._data = data;
     const newMarkup = this._generateMarkup();
@@ -30,7 +42,7 @@ export default class View {
       const curEl = curElements[i];
       // console.log(curEl, newEl.isEqualNode(curEl));
 
-      // Updates chaged TEXT
+      // Updates changed TEXT
       if (
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.trim() !== ''
@@ -48,10 +60,16 @@ export default class View {
     });
   }
 
+  /**
+   * Clears the parent element for the new markup to be inserted
+   */
   _clear() {
     this._parentElement.innerHTML = '';
   }
 
+  /**
+   * Shows a rotating loading spinner while waiting for content to be available
+   */
   renderSpinner() {
     const markup = `
        <div class="spinner">
@@ -65,6 +83,11 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  /**
+   * Render errors to the UI
+   *
+   * @param {string} message Shows the default error message if no custom error message was passed
+   */
   renderError(message = this._errorMessage) {
     const markup = `
         <div class="error">
@@ -81,6 +104,11 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  /**
+   * Render success message to the UI
+   *
+   * @param {string} message Prints the default success message if none passed
+   */
   renderMessage(message = this._message) {
     const markup = `
           <div class="message">
