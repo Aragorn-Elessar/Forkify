@@ -29,6 +29,18 @@
   }
 }
 
+.pages-count {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 20px;
+  font-size: 13px;
+  top: 13px;
+
+  border-radius: 50%;
+  background-color: #f9f5f3;
+}
+
 .copyright {
   color: $color-grey-dark-2;
   font-size: 1.2rem;

@@ -34,6 +34,7 @@ class PaginationView extends View {
            <use href="${icons}#icon-arrow-right"></use>
          </svg>
        </button>
+       <div class="pages-count">${numPages}</div>
     `;
 
     // Last page
@@ -47,6 +48,7 @@ class PaginationView extends View {
           </svg>
           <span>Page ${curPage - 1}</span>
         </button>
+        <div class="pages-count">${numPages}</div>
     `;
 
     // Other page
@@ -68,6 +70,7 @@ class PaginationView extends View {
               <use href="${icons}#icon-arrow-right"></use>
           </svg>
         </button>
+        <div class="pages-count">${numPages}</div>
 `;
 
     // Page 1, and there are No other pages
