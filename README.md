@@ -12,7 +12,7 @@
 
 ## Project-Description
 
-Starter code had a static non functional page structure interface. I implemented the interactions and functionality for the app following the (MVC) architecture and applying (OOP) principles. Main methods included searching, rendering, and navigating different food recipes using an online API. Added some features like bookmarking, and the ability to create and save custom recipes to the app. Maintained bookmarks data in `localStorage` browser API. And used Parcel for bundling and development
+The starter code had a static non-functional page structure interface. I implemented the interactions and functionality for the app following the (MVC) architecture and applying (OOP) principles. The main methods included searching, rendering, and navigating different food recipes using an online API. Added features like bookmarking, and the ability to create and save custom recipes to the app. Maintained bookmark data in localStorage browser API. And used Parcel for bundling and development.
 
 ## Prerequisites
 
