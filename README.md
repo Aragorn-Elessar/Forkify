@@ -29,16 +29,16 @@ Terminal commands to start using the project:
 `git clone https://github.com/Aragorn-Elessar/Forkify.git`
 ```
 
-- Install modules dependencies
-
-```
-`npm i`
-```
-
 - Call into the directory location
 
 ```
 `cd Forkify`
+```
+
+- Install modules dependencies
+
+```
+`npm i`
 ```
 
 - Opens code in `VSCode`
